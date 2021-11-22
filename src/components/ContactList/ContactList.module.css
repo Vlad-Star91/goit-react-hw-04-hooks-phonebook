@@ -1,0 +1,18 @@
+.btnList {
+  min-width: 120px;
+  background-color: rgb(201, 67, 57);
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.btnList:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(201, 67, 57);
+}
+.btnList:focus {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(201, 67, 57);
+}

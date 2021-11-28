@@ -25,10 +25,8 @@ export default function Mobile() {
       ? alert('This name is already in contacts.')
       : setContacts([contact, ...contacts]);
   };
-
-  const valuesFilter = e => {
-    const { name, number, value } = e.currentTarget;
-    setFilter({ [name]: value, [number]: value });
+  const valuesFilter = value => {
+    setFilter(value);
   };
   const getFilter = () => {
     const filterValues = filter.toLowerCase();
@@ -36,17 +34,14 @@ export default function Mobile() {
       contact.name.toLowerCase().includes(filterValues),
     );
   };
-
   const checkName = newName => {
     return contacts.some(
       ({ name }) => name === Object.values(newName).join(''),
     );
   };
-
   const deletedContact = contactId => {
     setContacts(contacts.filter(contact => contact.id !== contactId));
   };
-
   const filterContact = getFilter();
   return (
     <div className={s.container}>
